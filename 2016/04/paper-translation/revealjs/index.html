@@ -98,37 +98,45 @@
         
         <section>
           <p style="text-align: left;">例子：</p>
-          <ol>
-            <li>
-              <p style="width:300px"><span class="fragment highlight-blue" data-fragment-index="1">A</span> &gt <span class="fragment highlight-red" data-fragment-index="5">B</span> &gt <span class="fragment highlight-green" data-fragment-index="9">C</span> &gt D &gt E</p>
-            </li>
-            <li>
-              <p style="width:300px"><span class="fragment highlight-red" data-fragment-index="6">B</span> &gt <span class="fragment highlight-green" data-fragment-index="10">C</span> &gt D &gt <span class="fragment highlight-blue" data-fragment-index="2">A</span> &gt E</p>
-            </li>
-            <li>
-              <p style="width:300px"><span class="fragment highlight-green" data-fragment-index="11">C</span> &gt D &gt E &gt <span class="fragment highlight-blue" data-fragment-index="3">A</span> &gt <span class="fragment highlight-red" data-fragment-index="7">B</span></p>
-            </li>
-          </ol>
+          <div>
+            <div style="float: left;">
+              <ol>
+                <li>
+                  <p style="width:300px"><span class="fragment highlight-blue" data-fragment-index="1">A</span> &gt <span class="fragment highlight-red" data-fragment-index="5">B</span> &gt <span class="fragment highlight-green" data-fragment-index="9">C</span> &gt D &gt E</p>
+                </li>
+                <li>
+                  <p style="width:300px"><span class="fragment highlight-red" data-fragment-index="6">B</span> &gt <span class="fragment highlight-green" data-fragment-index="10">C</span> &gt D &gt <span class="fragment highlight-blue" data-fragment-index="2">A</span> &gt E</p>
+                </li>
+                <li>
+                  <p style="width:300px"><span class="fragment highlight-green" data-fragment-index="11">C</span> &gt D &gt E &gt <span class="fragment highlight-blue" data-fragment-index="3">A</span> &gt <span class="fragment highlight-red" data-fragment-index="7">B</span></p>
+                </li>
+              </ol>
+              
+            </div>
+            <div style="float: left;">
+              <p style="font-size: 30px;" class="fragment" data-fragment-index="4">
+                medRank(A) = median(1,4,4) = 4
+              </p>
+              <p style="font-size: 30px;" class="fragment" data-fragment-index="8">
+                medRank(B) = median(2,1,5) = 2
+              </p>
+              <p style="font-size: 30px;" class="fragment" data-fragment-index="12">
+                medRank(C) = median(1,2,3) = 2
+              </p>
+              <p style="font-size: 30px;" class="fragment" data-fragment-index="13">
+                medRank(D) = median(4,3,2) = 3
+              </p>
+              <p style="font-size: 30px;" class="fragment" data-fragment-index="14">
+                medRank(E) = median(5,5,3) = 5
+              </p>
+              
+              <p class="fragment" data-fragment-index="16">
+                B &gt C &gt  D &gt A &gt E
+              </p>
+              
+            </div>
+          </div>
           
-          <p class="fragment" data-fragment-index="4">
-            medRank(A) = median(1,4,4) = 4
-          </p>
-          <p class="fragment" data-fragment-index="8">
-            medRank(B) = median(2,1,5) = 2
-          </p>
-          <p class="fragment" data-fragment-index="12">
-            medRank(C) = median(1,2,3) = 2
-          </p>
-          <p class="fragment" data-fragment-index="13">
-            medRank(D) = median(4,3,2) = 3
-          </p>
-          <p class="fragment" data-fragment-index="14">
-            medRank(E) = median(5,5,3) = 5
-          </p>
-          
-          <p class="fragment" data-fragment-index="16">
-            B &gt C &gt  D &gt A &gt E
-          </p>
         </section>
 
         <section>
@@ -185,6 +193,9 @@
               <span class="fragment highlight-current-blue">
                 令z代表D中medrank值最小的文档，那么会以(1-1/n)的概率,对D上的任意一个文档x都使得不等式d(z,q)
                 &lt= (1+ε)d(x,q)成立。
+              </span>
+              <span style="font-size: 30px;" class="fragment highlight-current-red">
+                PS： 定理在z等于(1+ε)|q-真正最相邻点|时候不成立。
               </span>
             </p>
           </section>
