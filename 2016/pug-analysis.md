@@ -43,7 +43,7 @@ head
 通过将输入的字符串转化成一个个的token
 
 index.jade的tokens
-```json
+```js
 [ { type: 'comment',
     line: 1,
     col: 1,
@@ -127,7 +127,7 @@ if (indents < this.indentStack[0]) {
 - interpolation
 
 index.jade的AST
-```
+```json
 {
   "type": "Block",
   "nodes": [
